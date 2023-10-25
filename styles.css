@@ -1,0 +1,73 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("img.jpg");
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+i {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 -1px 1px rgb(114, 114, 114);
+  top: -20px;
+  animation: nieve linear infinite;
+}
+
+@keyframes nieve {
+  0% {
+    top: -20px;
+  }
+  100% {
+    top: calc(100vh + 50px);
+  }
+}
+
+#panda {
+  position: relative;
+  top: 350px;
+  background: url("panda.png") no-repeat;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  animation: desplazamiento 18s linear infinite;
+}
+
+@keyframes desplazamiento {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  25% {
+    left: calc(100% - 300px);
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100% - 300px);
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(-1);
+  }
+}
+
+.rectangulo {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 500px;
+  height: 90px;
+  padding: 20px;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  text-align: center;
+}
+
+.rectangulo p {
+  font-size: 35px;
+  font-family: "Parisienne", cursive;
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
